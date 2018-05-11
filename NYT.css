@@ -1,3 +1,26 @@
-img{
-    height: 20px;
+.jumbotron{
+    background: darkblue;
+    height: 100px;
+    color: white;
+    text-align: center;
+    max-width:1108px;
+    margin: auto;
+}
+#NYT{
+    line-height: 5px;
+    vertical-align: center;
+}
+
+
+#delete{
+    margin-left: 50px;
+}
+
+#footer{
+    max-width:1108px;
+    border-top: solid 1px lightgrey;
+    padding-top: 10px;
+    margin-top: 20px;
+    text-align:center;
+    padding-bottom:20px;
 }
