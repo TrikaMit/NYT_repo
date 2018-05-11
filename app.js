@@ -23,13 +23,30 @@
             var results = result['response']["docs"];
             // var webURL = results[elements]["web_url"]);
             // var 
+            var list = $("<ul>");
+            list.addClass("list-group");
             for (elements in results){
                 console.log("Url: " + results[elements]["web_url"]);
                 console.log("Url: " + results[elements]["multimedia"][2].url);
+                console.log("Headline: "+ results[elements].headline.main);
                 // console.log("Url: " + results[elements]["multimedia"][2].url);
+                var listItem = $("<li>");
+                listItem.addClass("list-group-item");
+                var listItemHTMLString = "<b>" +results[elements].headline.main+ "</b><br>";
+                var linkToArt = $("<a>")
+                linkToArt.attr("href", + results[elements]["web_url"]);
+                linkToArt.text("Link to the Article: " + results[elements]["web_url"]);
+                console.log("listItemHTMLString: " + listItemHTMLString)
+                listItem.html(listItemHTMLString)
+                var artImage= $("<img>");
+                var artImageSrcString = "https://www.nytimes.com/"+results[elements]["multimedia"][2].url;
+                artImage.attr("src", artImageSrcString);
+                artImage.appendTo(listItem);
+                linkToArt.appendTo(listItem);
+                listItem.appendTo(list);
 
             }
-
+            ($("#resultsarea").append(list));
         }).fail(function (err) {
             throw err;
         });

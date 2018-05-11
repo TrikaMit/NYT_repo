@@ -10,7 +10,9 @@
     line-height: 5px;
     vertical-align: center;
 }
-
+img{
+    margin: 3px;
+}
 
 #delete{
     margin-left: 50px;
