@@ -12,97 +12,102 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="NYT.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"
+        defer></script>
+    <script src='app.js' defer></script>
+
 </head>
 
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4" id="NYT">
-                <img src="newspaper.png" style= 'background-color: white' class="img-fluid" height="40px" width="40px"> New York Times Search</h1>
+                <img src="newspaper.png" style='background-color: white' class="img-fluid" height="40px" width="40px"> New York Times Search</h1>
         </div>
     </div>
-<br>
-<div class="container">
-    <div class="card">
-        <img class="card-img-top" src="holder.js/100x180/" alt="">
-        <div class="card-body">
+    <br>
+    <div class="container">
+        <div class="card">
+            <img class="card-img-top" src="holder.js/100x180/" alt="">
+            <div class="card-body">
 
-            <div class="container">
-                <h4 class="card-title">
+                <div class="container">
+                    <h4 class="card-title">
                         <i class="material-icons">
-                                web
-                                </i> Search Parameters</h4>
-                <div class="form-group">
+                            web
+                        </i> Search Parameters</h4>
+                    <div class="form-group">
 
-                    <label for="">Search Term: </label>
-                    <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" name=""
-                        id="searchterm" class="form-control" placeholder="" aria-describedby="helpId">
-                    <label for="">Number of Records to Retrieve:</label>
-                    <select class="form-control" id="sel1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    <!-- <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"> -->
-                    <label for="">Start Year (Optional): </label>
-                    <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" name=""
-                        id="" class="form-control" placeholder="" aria-describedby="helpId">
-                    <label for="">End Year (Optional): </label>
-                    <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" name=""
-                        id="" class="form-control" placeholder="" aria-describedby="helpId">
+                        <label for="">Search Term: </label>
+                        <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" name=""
+                            id="searchterm" class="form-control" placeholder="" aria-describedby="helpId">
+                        <label for="">Number of Records to Retrieve:</label>
+                        <select class="form-control" id="sel1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <!-- <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"> -->
+                        <label for="">Start Year (Optional): </label>
+                        <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" name=""
+                            id="" class="form-control" placeholder="" aria-describedby="helpId">
+                        <label for="">End Year (Optional): </label>
+                        <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" name=""
+                            id="" class="form-control" placeholder="" aria-describedby="helpId">
 
-                    <br>
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <button type="submit" class="btn " id="searchbutton"><i class="material-icons">
-                                    search
+                        <br>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <button type="submit" class="btn " id="searchbutton">
+                                    <i class="material-icons">
+                                        search
                                     </i> Search </button>
-                                    
-                            <button type="submit" class="btn"><i class="material-icons" id="delete">
-                                    delete
+
+                                <button type="submit" class="btn">
+                                    <i class="material-icons" id="delete">
+                                        delete
                                     </i> Clear Results</button>
 
+                            </div>
                         </div>
+
+
                     </div>
 
-
                 </div>
-
             </div>
         </div>
     </div>
-</div>
-<br>
+    <br>
     <div class="container">
 
         <div class="card">
             <img class="card-img-top" src="holder.js/100x180/" alt="">
-            <div class="card-body">
+            <div class="card-body" id="resultsarea">
                 <div class="container">
-                <h4 class="card-title">
-                    <i class="material-icons">
-                        border_all
-                    </i> Top Articles</h4>
-                <p class="card-text"></p>
-            </div>
+                    <h4 class="card-title">
+                        <i class="material-icons">
+                            border_all
+                        </i> Top Articles</h4>
+                    <p class="card-text"></p>
+                </div>
             </div>
         </div>
 
     </div>
 
     <div class="container" id="footer">
-        
-    <footer class="footer">Made with lots and lots of
-        <img src="heart.svg" class="img-fluid" height="20px" width="20px">
-    </footer>
-</div>
+
+        <footer class="footer">Made with lots and lots of
+            <img src="heart.svg" class="img-fluid" height="20px" width="20px">
+        </footer>
+    </div>
 
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>    
-<script src='app.js' defer></script>
+
 </body>
 
 </html>
